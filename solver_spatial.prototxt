@@ -1,0 +1,23 @@
+net: "/home/ubuntu/caffe/models/cnn_spatial/train_new.prototxt"
+type:"AdaGrad"
+#type:"RMSProp"
+#type:"Adam"
+
+
+test_iter: 1000
+test_interval: 500
+base_lr: 0.001
+lr_policy: "step"
+
+#gamma: 0.0001
+stepsize: 3000
+display: 200
+max_iter: 40000
+
+#momentum: 0.9
+#momentum2:0.999
+
+weight_decay: 0.0005
+snapshot: 1000
+snapshot_prefix: "/home/ubuntu/caffe/models/cnn_spatial/adagrad"
+solver_mode: GPU
